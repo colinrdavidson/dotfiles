@@ -7,12 +7,14 @@ Also, this is my first readme, so lets try out this .md guy:
 
 ###Here's some bold text
 
-Now how about an code snippet:
+Now how about an code snippet: *Why not ~~Zoidberg~~ __python__*
 
 ```python
 def print_something_out():
   print "I'm aprintin\'"
 ```
+
+---
 
 Hopefully this works
 
