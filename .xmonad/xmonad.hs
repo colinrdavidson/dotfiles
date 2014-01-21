@@ -30,6 +30,7 @@ main = do
 			, manageHook = manageDocks <+> scratchpadManageHook (W.RationalRect 0.2 0.2 0.6 0.5) <+> composeOne [ isFullscreen -?> doFullFloat ] <+> (className =? "trayer" --> doIgnore)
 			, keys = \c -> myKeys c `M.union` keys defaultConfig c
 			, logHook = dynamicLogWithPP (myPP xmobar) >> updatePointer (Relative 0.9 0.9)
+      , layoutHook = avoidStruts  $  layoutHook defaultConfig
 			}
 			where
 

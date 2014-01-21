@@ -3,13 +3,19 @@ Config { font         = "xft:Monospace:pixelsize=11"
        , fgColor = "#aaaaaa"
        , position = Top
        , lowerOnStart = False
-       , commands = [ Run Cpu ["-L","3","-H","50","--high","#f0c040"] 10
-                    , Run Memory ["-t","Mem: <usedratio>%"] 10
+       , commands = [ Run Cpu ["-H", "50", "-h", "red"] 10
+                    , Run Memory ["-t","Mem: <usedratio>%",
+                                  "-H", "50", "-h", "red"] 10
                     , Run Swap [] 10
                     , Run StdinReader
-                    , Run Weather "CYVV" ["-t","<station>: <tempC>C","-L","18","-H","25","--normal","green","--high","red","--low","lightblue"] 3600
+                    , Run Weather "CYVV" ["-t", "<station>: <tempC>C",
+                                          "-L", "0", "-l", "lightblue", 
+                                          "-H", "25", "-h", "red"] 3600
+                    , Run Battery ["-f", "/sys/class/power_supply/AC0/online", 
+                                   "-t", "Battery:<left>%(<timeleft>)",
+                                   "-L", "20", "-l", "red", "-p", "3"] 10
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader%}{%CYVV% · %cpu% · %memory% · %swap% · %date%"
-       }
+       , template = "%StdinReader%}{%CYVV% · %cpu% · %memory% · %swap% · %battery% · %date% "
+}
