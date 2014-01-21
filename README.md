@@ -7,7 +7,7 @@ Also, this is my first readme, so lets try out this .md guy:
 
 ###Here's some bold text
 
-Now how about an code snippet: *Why not ~~Zoidberg~~ __python__*
+Now how about a code snippet: *Why not ~~Zoidberg~~ __python__*
 
 ```python
 def print_something_out():
