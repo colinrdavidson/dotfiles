@@ -57,11 +57,12 @@ main = do
 				}
 
 				myKeys conf@(XConfig {XMonad.modMask = modMask, workspaces = ws }) = M.fromList $
-					[ ((modMask, xK_q), recompile True >> restart "xmonad" True)
-					, ((modMask, xK_p), shellPrompt defaultXPConfig)
-					, ((modMask, xK_Escape), toggleWS)
+					[ ((modMask                , xK_q), recompile True >> restart "xmonad" True)
+					, ((modMask                , xK_p), shellPrompt defaultXPConfig)
+					, ((modMask                , xK_Escape), toggleWS)
 					, ((modMask .|. controlMask, xK_j), nextScreen)
 					, ((modMask .|. controlMask, xK_k), prevScreen)
-					, ((modMask, xK_o), shiftNextScreen >> nextScreen)
-					, ((modMask .|. shiftMask, xK_r), scratchpadSpawnActionTerminal "urxvt -tr -tint grey -foreground \'#FFFF00\' +sb")
+					, ((modMask                , xK_o), shiftNextScreen >> nextScreen)
+					, ((modMask .|. shiftMask  , xK_r), scratchpadSpawnActionTerminal "urxvt -tr -tint grey -foreground \'#FFFF00\' +sb")
+          , ((modMask                , xK_b), sendMessage ToggleStruts)
 					]
