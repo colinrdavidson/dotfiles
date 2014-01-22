@@ -3,10 +3,11 @@ Config { font         = "xft:Monospace:pixelsize=11"
        , fgColor = "#aaaaaa"
        , position = Top
        , lowerOnStart = False
-       , commands = [ Run Cpu ["-H", "50", "-h", "red"] 10
-                    , Run Memory ["-t","Mem: <usedratio>%",
+       , commands = [ Run Cpu ["-t", "Cpu:<total>%",
+                               "-H", "50", "-h", "red"] 10
+                    , Run Memory ["-t","Mem:<usedratio>%",
                                   "-H", "50", "-h", "red"] 10
-                    , Run Swap [] 10
+                    , Run Swap ["-t", "Swap:<usedratio>%"] 10
                     , Run StdinReader
                     , Run Weather "CYVV" ["-t", "<station>:<tempC>C",
                                           "-L", "0", "-l", "lightblue", 
@@ -20,5 +21,5 @@ Config { font         = "xft:Monospace:pixelsize=11"
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader%}{%CYVV% · %cpu% · %memory% · %swap% · %battery% · %date% "
+       , template = "%StdinReader%}{· %CYVV% · %cpu% · %memory% · %swap% · %battery% · %date% ·"
 }
