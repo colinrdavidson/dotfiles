@@ -8,12 +8,15 @@ Config { font         = "xft:Monospace:pixelsize=11"
                                   "-H", "50", "-h", "red"] 10
                     , Run Swap [] 10
                     , Run StdinReader
-                    , Run Weather "CYVV" ["-t", "<station>: <tempC>C",
+                    , Run Weather "CYVV" ["-t", "<station>:<tempC>C",
                                           "-L", "0", "-l", "lightblue", 
                                           "-H", "25", "-h", "red"] 3600
-                    , Run Battery ["-f", "/sys/class/power_supply/AC0/online", 
-                                   "-t", "Battery:<left>%(<timeleft>)",
-                                   "-L", "20", "-l", "red", "-p", "3"] 10
+                    , Run Battery ["-t", "<acstatus>:<left>%(<timeleft>)",
+                                   "-L", "20", "-l", "red", 
+                                   "-H", "95", "-h", "green",
+                                   "--", "-f", "AC0/online",
+                                   "-O", "Charging", "-o", "Discharging"
+                                   ] 10
                     ]
        , sepChar = "%"
        , alignSep = "}{"
