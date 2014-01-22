@@ -15,7 +15,7 @@ Config { font         = "xft:Monospace:pixelsize=11"
                                    "-L", "20", "-l", "red", 
                                    "-H", "95", "-h", "green",
                                    "--", "-f", "AC0/online",
-                                   "-O", "Charging", "-o", "Discharging"
+                                   "-O", "<fc=lightgreen>Charging</fc>", "-o", "Discharging"
                                    ] 10
                     ]
        , sepChar = "%"
