@@ -16,6 +16,7 @@ set laststatus=2
 set list
 set listchars=tab:»·,trail:·
 set nomodeline
+set ruler
 set shiftround
 set shiftwidth=2
 set showcmd
@@ -31,3 +32,6 @@ set wrap
 
 " Press Space to turn off highlighting and clear any message already displayed.
 :nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+
+" Autoindent for python
+autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
