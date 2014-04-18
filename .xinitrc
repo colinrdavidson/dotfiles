@@ -1,3 +1,6 @@
+#load acpi daemon
+sudo acpid
+
 #set the cursor
 xsetroot -cursor_name left_ptr
 
