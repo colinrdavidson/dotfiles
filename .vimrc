@@ -11,6 +11,7 @@ set expandtab
 set hidden "lets you hide buffers without having to save first
 set history=50
 set hlsearch
+set ignorecase
 set incsearch
 set laststatus=2
 set list
