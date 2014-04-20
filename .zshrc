@@ -61,8 +61,9 @@ alias mkdir='nocorrect mkdir'
 alias cdl='cd $1; ll'
 alias cower='cower -t ~/builds -d'
 
-alias wifi-menu='ip link set wls1 down && ip link set wls1 up && wifi-menu'
 alias fuckin='sudo'
+alias sudo='nocorrect sudo'
+alias wifi-menu='ip link set wls1 down && ip link set wls1 up && wifi-menu'
 
 export PATH=$PATH:/usr/bin/:bin/:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:/opt/:/home/colin/.local/bin
 
