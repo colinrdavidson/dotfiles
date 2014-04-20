@@ -1,0 +1,10 @@
+To change virtual console keymap:
+- /etc/vconsole.conf
+- KEYMAP={us, swapcapsqwerty, swapcapsdvorak}
+
+Before starting virtualbox
+- modprobe vboxdrv
+
+Systemd
+-lid not handled properly by systemd, so edit /etc/acpi/handler.sh
+-in future, uncomment "HandleLidSwitch" in /etc/systemd/logind.conf
