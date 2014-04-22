@@ -7,8 +7,8 @@ xmodmap ~/.swapCAPS.xmodmap
 #load .Xresources
 xrdb ~/.Xresources
 
+#set wallpaper with feh
+feh --bg-scale ~/media/wallpaper/mandelbrot.jpeg &
+
 #start xmonad
 exec xmonad
-
-#set wallpaper with feh
-#feh --bg-scale ~/media/wallpaper/mandelbrot.jpeg
