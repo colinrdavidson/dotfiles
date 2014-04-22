@@ -34,7 +34,7 @@ main = do
 			}
 			where
 
-				myWorkspaces = ["ONE ", " TWO ", " THREE ", " FOUR ", " FIVE " ," SIX ", " SEVEN ", " EIGHT ", " NINE "]
+				myWorkspaces = ["ONE ", " TWO ", " THREE ", " FOUR ", " FIVE "]
 
 				myFont = "xft:DejaVu Sans:size=10"
 				focusColor = "#535d6c"
@@ -63,6 +63,6 @@ main = do
 					, ((modMask .|. controlMask, xK_j), nextScreen)
 					, ((modMask .|. controlMask, xK_k), prevScreen)
 					, ((modMask                , xK_o), shiftNextScreen >> nextScreen)
-					, ((modMask .|. shiftMask  , xK_r), scratchpadSpawnActionTerminal "urxvt -tr -tint grey -foreground \'#FFFF00\' +sb")
-          , ((modMask                , xK_b), sendMessage ToggleStruts)
+					, ((modMask .|. shiftMask  , xK_r), scratchpadSpawnActionTerminal "urxvt")
+					, ((modMask                , xK_b), sendMessage ToggleStruts)
 					]
