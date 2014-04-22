@@ -1,0 +1,4 @@
+handler.sh:
+  /etc/acpi/handler.sh
+  catch all for acpi events
+  added in lid control and volume control
