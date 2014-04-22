@@ -34,7 +34,7 @@ main = do
 			}
 			where
 
-				myWorkspaces = ["ONE ", " TWO ", " THREE ", " FOUR ", " FIVE "]
+				myWorkspaces = [" ONE ", " TWO ", " THREE ", " FOUR ", " FIVE"]
 
 				myFont = "xft:DejaVu Sans:size=10"
 				focusColor = "#535d6c"
