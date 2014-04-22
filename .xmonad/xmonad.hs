@@ -54,6 +54,10 @@ main = do
 					, ppWsSep = ""
 					, ppTitle = xmobarColor lightTextColor ""
 					, ppOutput = hPutStrLn din
+					--I don't want NSP showing up at the end of my
+					-- workspace list
+					,ppSort = fmap (.scratchpadFilterOutWorkspace)
+										$ ppSort defaultPP
 				}
 
 				myKeys conf@(XConfig {XMonad.modMask = modMask, workspaces = ws }) = M.fromList $
