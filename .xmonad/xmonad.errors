@@ -1,3 +1,0 @@
-
-xmonad.hs:20:1: Warning:
-    Module `GHC.IOBase' is deprecated: use GHC.IO instead
