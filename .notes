@@ -8,3 +8,18 @@ Before starting virtualbox
 Systemd
 -lid not handled properly by systemd, so edit /etc/acpi/handler.sh
 -in future, uncomment "HandleLidSwitch" in /etc/systemd/logind.conf
+
+Burning
+-To burn iso: cdrecord -v dev=/dev/cdrom <path_to_iso>
+-To make iso: mkisofs -J -r -o output.iso <dir>
+
+HDMI out
+-xrandr shows available outputs
+-xrandr --output HDMI1 --mode <blahxblah>
+-xrandr --output HDMI1 --off
+
+HDMI out sound
+-aplay -l to check card, device
+-aplay -D plughw:<card>,<device> /usr/share/sounds/alsa/Front_Center.wav
+-settings places in .asoundrc
+
